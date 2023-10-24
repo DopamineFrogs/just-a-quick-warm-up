@@ -1,0 +1,27 @@
+#I don't even know what this was supposed to be. I think it was a leetcode question about doing some formula on any number > 100 and it would always end up at 99 or something.
+#anyways here it is:
+
+
+def subtract_sum(n):
+    global emptyArr
+    emptyArr = []
+    answer = n
+    while answer > 100:
+        a = 0
+        sum = [int(x) for x in str(answer)]
+        for i in sum: a += i
+        answer -= a
+        emptyArr.append(answer)
+    return answer
+
+def subtract_sum2(n):
+    global emptyArr2
+    emptyArr2 = []
+    answer = n
+    while answer > 100:
+        a = 0
+        sum = [int(x) for x in str(answer)]
+        for i in sum: a += i
+        answer -= a
+        emptyArr2.append(answer)
+    return emptyArr2
